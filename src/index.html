@@ -6,7 +6,7 @@
     <title>Personal details - Senior frontend exercise</title>
 </head>
 <body class="country-nl">
-    <div class="header">
+    <div role="banner" class="header">
         <div class="header__inner">
             <div class="header__logo">
                 <img
@@ -31,7 +31,7 @@
         </div>
     </div>
 
-    <div class="content">
+    <div role="main" class="content">
         <div class="grid">
             <div class="column first-item">
                 <img
@@ -52,12 +52,14 @@
                             <strong>Gender</strong><br>
                             <div class="section radio-button">
                                 <span class="radio-button__label pr-3">
-                                    <input id="gender-M" type="radio" name="gender" value="M"> Male
+                                    <input id="gender-M" type="radio" name="gender" value="M">
+                                    <label aria-labelledby="gender" aria-label="gender" for="M">Male</label>
                                 </span>
                             </div>
                             <div class="section radio-button">
                                 <span class="radio-button__label">
-                                    <input id="gender-F" type="radio" name="gender" value="F"> Female
+                                    <input id="gender-F" type="radio" name="gender" value="F" >
+                                    <label for="F">Female</label>
                                 </span>
                             </div>
                         </div>
@@ -65,40 +67,57 @@
     
                     <div class="form_row">
                         <div>
-                            <strong>Name</strong><br>
-                            <input type="text" name="name" id="name" required minlength="2">
+                            <label for="name"><strong>Name</strong></label><br>
+                            <input type="text" name="name" id="name" required minlength="2" >
                         </div>
                     </div>
     
                     <div class="form_row">
                         <div>
-                            <strong>Postal code</strong><br>
-                            <input type="text" name="postal_code" id="postal_code" required pattern="^\d{4}[\s-]?[a-zA-Z]{2}$" minlength="6" maxlength="7" class="js-checkout-postal-code-field" data-url-postalcode-check="/">
+                            <label for="postal_code"><strong>Postal code</strong></label><br>
+                            <input
+                                type="text"
+                                name="postal_code"
+                                id="postal_code"
+                                required
+                                pattern="^\d{4}[\s-]?[a-zA-Z]{2}$"
+                                minlength="6"
+                                maxlength="7"
+                                class="js-checkout-postal-code-field"
+                                data-url-postalcode-check="/"
+                            >
                         </div>
                     </div>
     
                     <div class="form_row">
                         <div>
-                            <strong>House number</strong><br>
-                            <input type="text" name="house_number" id="house_number" required pattern="[0-9]+$" minlength="1" maxlength="10">
+                            <label for="email"><strong>House number</strong></label><br>
+                            <input
+                                type="text"
+                                name="house_number"
+                                id="house_number"
+                                required pattern="[0-9]+$"
+                                minlength="1"
+                                maxlength="10"
+                            >
                         </div>
                     </div>
     
                     <div class="form_row">
                         <div>
-                            <strong>Email address</strong><br>
+                            <label><strong>Email address</strong></label><br>
                             <input type="text" name="email" id="email" pattern="^[^\s,@]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
                         </div>
                     </div>
                     <div class="form_row mb-4">
                         <div>
-                            <strong>Phone number</strong><br>
+                            <label for="phone"><strong>Phone number</strong></label><br>
                             <input type="text" name="phone" pattern="^[^a-zA-Z]*$" required minlength="10" maxlength="20">
                         </div>
                     </div>
     
                     <div class="btnContainer hasSubmitBtn">
-                        <button class="btn btn-primary" value="true" name="save_order" type="submit">
+                        <button class="btn btn-primary" value="true" name="signup" type="submit">
                             Sign up
                         </button>
                     </div>
