@@ -1,0 +1,33 @@
+// Header component
+.header {
+  border-bottom: 1px solid $grey-smoke;
+
+  .header-inner {
+    display: flex;
+    max-width: $screen-lg;
+    margin: 0 auto;
+    align-items: center;
+    // border-bottom: 1px solid $grey-smoke; WILL REMOVE FOR REDUNDANT BORDER WIDTH
+
+    .header-logo {
+      width: auto;
+      flex: 1 1 auto;
+      text-align: left;
+    }
+
+    .header-link {
+      font-weight: bold;
+      color: $grey-dark;
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    .header-link-with-spacing {
+      padding-right: 24px;
+
+      @include breakpoint-up($screen-sm) {
+        padding-right: 64px
+      }
+    }
+  }
+}
