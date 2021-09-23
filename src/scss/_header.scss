@@ -14,8 +14,8 @@
       text-align: left;
 
       .header__logo-image {
-        width: 44px;
-        height: 44px;
+        width: 44px;  // not rem for consistency with branding
+        height: 44px; // not rem for consistency with branding
       }
     }
 
@@ -36,7 +36,7 @@
             color: $grey-dark;
             text-decoration: none;
             font-weight: bold;
-            font-size: 16px;
+            font-size: 1rem;
           }
         }
       }

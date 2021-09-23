@@ -4,15 +4,19 @@
   box-sizing: border-box;
 }
 
+:root {
+  font-size: 16px; // 1rem = 16px
+}
+
 body {
   font: 13px 'Open Sans', Sans-Serif, Arial;
 }
 
 h1,
 h3 {
-  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
   color: $purple;
-  font-size: 32px;
+  font-size: 2rem;
 }
 
 strong {
@@ -29,8 +33,8 @@ a {
 }
 
 input {
-  padding: 5px;
-  font-size: 13px;
+  padding: 5px;     // not rem for consistency with branding
+  font-size: 13px;  // not rem for consistency with branding
   border: 0;
   border-bottom: 1px solid $grey;
 }
@@ -40,7 +44,7 @@ input[type="text"] {
 }
 
 .radio-button {
-  margin-top: 8px;
+  margin-top: 0.5rem;
   display: inline-flex;
 
   .radio-button__label {
@@ -50,7 +54,7 @@ input[type="text"] {
 
 form {
   .form_row {
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
 
     .errormessage {
       position: absolute;
@@ -69,9 +73,9 @@ form {
 // buttons
 .btn {
   width: 100%;
-  border-radius: 37px;
-  padding: 15px;
-  font-size: 16px;
+  border-radius: 37px; // not rem for consistency with branding
+  padding: 15px;       // not rem for consistency with branding
+  font-size: 1rem;
   text-transform: uppercase;
   border: 0;
   cursor: pointer;
