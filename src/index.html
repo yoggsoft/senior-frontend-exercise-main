@@ -35,11 +35,12 @@
         }
     </script>
 </head>
-<body class="countryNL">
+<body class="country-nl">
     <div class="header">
-        <div class="header-inner">
-            <div class="header-logo">
+        <div class="header__inner">
+            <div class="header__logo">
                 <img
+                    class="header__logo-image"
                     src="./images/header_logo.svg"
                     alt="customer-service-logo"
                     title='customer-service-logo'
@@ -47,8 +48,16 @@
                     height="44px"
                 />
             </div>
-            <a href="#" class="header-link header-link-with-spacing">English</a>
-            <a href="#" class="header-link">Customer Service</a>
+            <div class="header__navigation">
+                <ul class="header__navigation--align-right">
+                    <li class="header__navigation--item with-spacing">
+                        <a href="#" class="header__navigation--item--link">English</a>
+                    </li>
+                    <li class="header__navigation--item">
+                        <a href="#" class="header__navigation--item--link">Customer Service</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 

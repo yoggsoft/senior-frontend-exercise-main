@@ -34,6 +34,10 @@ input {
   border-bottom: 1px solid $grey;
 }
 
+input[type="text"] {
+  width: 100%;
+}
+
 .section {
   margin-top: 8px;
 }
@@ -52,19 +56,6 @@ input {
   }
 }
 
-body form .form_row {
-  margin-bottom: 16px!important;
-
-  &:nth-child(6) {
-    margin-bottom: 32px!important;
-  }
-}
-
-body form .form_row.message div {
-  text-align: top;
-  vertical-align: left;
-}
-
 label.errormessage {
   color: $red;
 }
@@ -77,6 +68,35 @@ body form#personal_details_form .btnContainer.hasSubmitBtn .orderButtonBar {
   font: 16px Arial, Sans-Serif;
 }
 
+form {
+  .form_row {
+    margin-bottom: 16px!important;
+
+    &:nth-child(6) {
+      margin-bottom: 32px!important;
+    }
+
+    &.message {
+      div {
+        text-align: top;
+        vertical-align: left; 
+      }
+    }
+  }
+}
+
+body form .form_row.message div {
+  text-align: top;
+  vertical-align: left;
+}
+
+body form .form_row {
+  margin-bottom: 16px!important;
+
+  &:nth-child(6) {
+    margin-bottom: 32px!important;
+  }
+}
 button.buttonGreenBar {
   width: 100%;
   border-radius: 37px;
@@ -87,8 +107,4 @@ button.buttonGreenBar {
   text-transform: uppercase;
   border: 0;
   cursor: pointer;
-}
-
-input[type="text"] {
-  width: 100%;
 }

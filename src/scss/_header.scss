@@ -2,31 +2,51 @@
 .header {
   border-bottom: 1px solid $grey-smoke;
 
-  .header-inner {
+  .header__inner {
     display: flex;
     max-width: $screen-lg;
     margin: 0 auto;
     align-items: center;
-    // border-bottom: 1px solid $grey-smoke; WILL REMOVE FOR REDUNDANT BORDER WIDTH
 
-    .header-logo {
+    .header__logo {
       width: auto;
       flex: 1 1 auto;
       text-align: left;
+
+      .header__logo-image {
+        width: 44px;
+        height: 44px;
+      }
     }
 
-    .header-link {
-      font-weight: bold;
-      color: $grey-dark;
-      font-size: 16px;
-      text-decoration: none;
-    }
+    .header__navigation {
+      flex-basis: auto;
+      flex-grow: 1;
+      flex-shrink: 0;
+      vertical-align: middle;
 
-    .header-link-with-spacing {
-      padding-right: 24px;
+      ul.header__navigation--align-right,
+      .header__navigation--align-right {
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-end;
 
-      @include breakpoint-up($screen-sm) {
-        padding-right: 64px
+        .header__navigation--item {
+          &.with-spacing {
+            padding-right: 24px;
+
+            @include breakpoint-up($screen-sm) {
+              padding-right: 64px
+            }
+          }
+
+          .header__navigation--item--link {
+            color: $grey-dark;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+          }
+        }
       }
     }
   }
