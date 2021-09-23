@@ -1,0 +1,45 @@
+// Header component
+.header {
+  border-bottom: 1px solid $grey-smoke;
+
+  .header__inner {
+    display: flex;
+    max-width: $screen-lg;
+    margin: 0 auto;
+    align-items: center;
+
+    .header__logo {
+      width: auto;
+      flex: 1 1 auto;
+      text-align: left;
+
+      .header__logo-image {
+        width: 44px;  // not rem for consistency with branding
+        height: 44px; // not rem for consistency with branding
+      }
+    }
+
+    .header__navigation {
+      flex-basis: auto;
+      flex-grow: 1;
+      flex-shrink: 0;
+      vertical-align: middle;
+
+      ul.header__navigation--align-right,
+      .header__navigation--align-right {
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-end;
+
+        .header__navigation--item {
+          .header__navigation--item--link {
+            color: $grey-dark;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

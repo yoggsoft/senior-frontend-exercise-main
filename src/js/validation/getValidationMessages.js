@@ -1,4 +1,4 @@
-import validationMessages from '../window-exports/validationMessages';
+import validationMessages from '../validationMessages';
 
 /**
  * @param {Object} [overrideValidationMessages]

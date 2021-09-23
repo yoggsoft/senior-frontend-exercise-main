@@ -1,0 +1,48 @@
+
+.grid {
+  max-width: $screen-xs;
+  margin: 0 auto;
+
+  @include breakpoint-up($screen-sm) {
+    max-width: $screen-lg;
+  }
+
+  .column {
+    @include breakpoint-up($screen-sm) {
+      width: 50%;
+      float: left;
+    }
+
+    &.first-item {
+      display: none;
+
+      @include breakpoint-up($screen-sm) {
+        display: block;
+        padding-right: 50px;
+      }
+
+      @include breakpoint-up($screen-md) {
+        width: 60%;
+      }
+    }
+
+    &.second-item {
+      @include breakpoint-up($screen-sm) {
+        padding-left: 50px;
+      }
+
+      @include breakpoint-up($screen-md) {
+        width: 40%;
+      }
+    }
+
+    .image {
+      @include breakpoint-up($screen-sm) {
+        height: auto;
+        width: 100%;
+        margin-top: 120px;
+        border-radius: 8px;
+      }
+    }
+  }
+}

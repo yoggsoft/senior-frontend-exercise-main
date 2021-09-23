@@ -1,0 +1,12 @@
+// mediaqueries
+@mixin breakpoint-up($size: $screen-lg) {
+	@media screen and (min-width: #{$size}) {
+		@content;
+	}
+}
+
+@mixin breakpoint-down($size: $screen-lg) {
+	@media screen and (max-width: #{$size}) {
+		@content;
+	}
+}

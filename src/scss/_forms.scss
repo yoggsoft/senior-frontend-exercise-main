@@ -1,0 +1,27 @@
+// forms
+.radio-button {
+  margin-top: 0.5rem;
+  display: inline-flex;
+
+  .radio-button__label {
+    display: flex;
+  }
+}
+
+form {
+  .form_row {
+    margin-bottom: 1.5rem;
+
+    .errormessage {
+      position: absolute;
+      color: $red;
+    }
+
+    &.message {
+      div {
+        text-align: top;
+        vertical-align: left; 
+      }
+    }
+  }
+}
