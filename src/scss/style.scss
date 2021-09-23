@@ -40,18 +40,12 @@ input[type="text"] {
 
 .section {
   margin-top: 8px;
-}
 
-.radio-button {
-  display: inline-flex;
+  &.radio-button {
+    display: inline-flex;
 
-  .radio-button__label {
-    padding-right: 24px;
-  }
-
-  &:last-of-type {
     .radio-button__label {
-      padding-right: 0;
+      display: flex;
     }
   }
 }
@@ -85,26 +79,18 @@ form {
   }
 }
 
-body form .form_row.message div {
-  text-align: top;
-  vertical-align: left;
-}
-
-body form .form_row {
-  margin-bottom: 16px!important;
-
-  &:nth-child(6) {
-    margin-bottom: 32px!important;
-  }
-}
-button.buttonGreenBar {
+// buttons
+.btn {
   width: 100%;
   border-radius: 37px;
   padding: 15px;
-  background-color: $purple;
   font-size: 16px;
-  color: $white;
   text-transform: uppercase;
   border: 0;
   cursor: pointer;
+
+  &-primary {
+    background-color: $purple;
+    color: $white;
+  }
 }

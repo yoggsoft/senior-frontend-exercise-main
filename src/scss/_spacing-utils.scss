@@ -1,0 +1,18 @@
+// utilities for spacing
+.pr-3 {
+  padding-right: 24px;
+}
+
+.pr-sm-3 {
+	@include breakpoint-up($screen-sm) {
+		padding-right: 24px;
+	}
+}
+
+.pr-sm-8 {
+	@include breakpoint-up($screen-sm) {
+		padding-right: 64px;
+	}
+}
+
+
