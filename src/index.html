@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Personal details - Senior frontend exercise</title>
     <script>
         var validationMessages = {
@@ -61,79 +61,79 @@
         </div>
     </div>
 
-    <div class="grid">
-        <div class="column first-item">
-            <img
-                class="image"
-                src="./images/login-image_lod.jpeg"
-                alt="login-image"
-                title="login-image"
-                width="600px"
-                height="400px"
-            />
-        </div>
-        <div class="column second-item">
-            <h3>Sign up</h3>
-            <p>Already have an account? Then <a href="#">log in</a>.</p>
-            <form action="/" method="post" id="personal_details_form" novalidate>
-                <div class="form_row">
-                    <div>
-                        <strong>Gender</strong><br>
-                        <div class="section radio-button">
-                            <span class="radio-button__label pr-3">
-                                <input id="gender-M" type="radio" name="gender" value="M"> Male
-                            </span>
+    <div class='content'>
+        <div class="grid">
+            <div class="column first-item">
+                <img
+                    class="image"
+                    src="./images/login-image_lod.jpeg"
+                    alt="login-image"
+                    title="login-image"
+                    width="600px"
+                    height="400px"
+                />
+            </div>
+            <div class="column second-item">
+                <h1>Sign up</h1>
+                <p>Already have an account? Then <a href="#">log in</a>.</p>
+                <form action="/" method="post" id="personal_details_form" novalidate>
+                    <div class="form_row">
+                        <div>
+                            <strong>Gender</strong><br>
+                            <div class="section radio-button">
+                                <span class="radio-button__label pr-3">
+                                    <input id="gender-M" type="radio" name="gender" value="M"> Male
+                                </span>
+                            </div>
+                            <div class="section radio-button">
+                                <span class="radio-button__label">
+                                    <input id="gender-F" type="radio" name="gender" value="F"> Female
+                                </span>
+                            </div>
                         </div>
-                        <div class="section radio-button">
-                            <span class="radio-button__label">
-                                <input id="gender-F" type="radio" name="gender" value="F"> Female
-                            </span>
+                    </div>
+    
+                    <div class="form_row">
+                        <div>
+                            <strong>Name</strong><br>
+                            <input type="text" name="name" id="name" required minlength="2">
                         </div>
                     </div>
-                </div>
-
-                <div class="form_row">
-                    <div>
-                        <strong>Name</strong><br>
-                        <input type="text" name="name" id="name" required minlength="2">
+    
+                    <div class="form_row">
+                        <div>
+                            <strong>Postal code</strong><br>
+                            <input type="text" name="postal_code" id="postal_code" required pattern="^\d{4}[\s-]?[a-zA-Z]{2}$" minlength="6" maxlength="7" class="js-checkout-postal-code-field" data-url-postalcode-check="/">
+                        </div>
                     </div>
-                </div>
-
-                <div class="form_row">
-                    <div>
-                        <strong>Postal code</strong><br>
-                        <input type="text" name="postal_code" id="postal_code" required pattern="^\d{4}[\s-]?[a-zA-Z]{2}$" minlength="6" maxlength="7" class="js-checkout-postal-code-field" data-url-postalcode-check="/">
+    
+                    <div class="form_row">
+                        <div>
+                            <strong>House number</strong><br>
+                            <input type="text" name="house_number" id="house_number" required pattern="[0-9]+$" minlength="1" maxlength="10">
+                        </div>
                     </div>
-                </div>
-
-                <div class="form_row">
-                    <div>
-                        <strong>House number</strong><br>
-                        <input type="text" name="house_number" id="house_number" required pattern="[0-9]+$" minlength="1" maxlength="10">
+    
+                    <div class="form_row">
+                        <div>
+                            <strong>Email address</strong><br>
+                            <input type="text" name="email" id="email" pattern="^[^\s,@]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+                        </div>
                     </div>
-                </div>
-
-                <div class="form_row">
-                    <div>
-                        <strong>Email address</strong><br>
-                        <input type="text" name="email" id="email" pattern="^[^\s,@]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+                    <div class="form_row mb-4">
+                        <div>
+                            <strong>Phone number</strong><br>
+                            <input type="text" name="phone" pattern="^[^a-zA-Z]*$" required minlength="10" maxlength="20">
+                        </div>
                     </div>
-                </div>
-                <div class="form_row">
-                    <div>
-                        <strong>Phone number</strong><br>
-                        <input type="text" name="phone" pattern="^[^a-zA-Z]*$" required minlength="10" maxlength="20">
-                    </div>
-                </div>
-
-                <div class="btnContainer hasSubmitBtn">
-                    <div class="orderButtonBar">
+    
+                    <div class="btnContainer hasSubmitBtn">
                         <button class="action order next btn btn-primary" value="true" name="save_order" type="submit">
                             Sign up
                         </button>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
 </body>

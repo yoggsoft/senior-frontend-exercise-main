@@ -1,18 +1,25 @@
 // utilities for spacing
 .pr-3 {
-  padding-right: 24px;
+  padding-right: 24px !important;
 }
 
 .pr-sm-3 {
 	@include breakpoint-up($screen-sm) {
-		padding-right: 24px;
+		padding-right: 24px !important;
 	}
 }
 
 .pr-sm-8 {
 	@include breakpoint-up($screen-sm) {
-		padding-right: 64px;
+		padding-right: 64px !important;
 	}
 }
 
+// .mb-2 {
+// 	margin-bottom: 16px;
+// }
+
+.mb-4 {
+	margin-bottom: 32px !important;
+}
 

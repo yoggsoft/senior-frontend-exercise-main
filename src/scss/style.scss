@@ -8,6 +8,7 @@ body {
   font: 13px 'Open Sans', Sans-Serif, Arial;
 }
 
+h1,
 h3 {
   margin-bottom: 12px;
   color: $purple;
@@ -38,36 +39,22 @@ input[type="text"] {
   width: 100%;
 }
 
-.section {
+.radio-button {
   margin-top: 8px;
+  display: inline-flex;
 
-  &.radio-button {
-    display: inline-flex;
-
-    .radio-button__label {
-      display: flex;
-    }
+  .radio-button__label {
+    display: flex;
   }
-}
-
-label.errormessage {
-  color: $red;
-}
-
-div.errormessagecontainer {
-  margin-top: 8px !important;
-}
-
-body form#personal_details_form .btnContainer.hasSubmitBtn .orderButtonBar {
-  font: 16px Arial, Sans-Serif;
 }
 
 form {
   .form_row {
-    margin-bottom: 16px!important;
+    margin-bottom: 24px;
 
-    &:nth-child(6) {
-      margin-bottom: 32px!important;
+    .errormessage {
+      position: absolute;
+      color: $red;
     }
 
     &.message {
