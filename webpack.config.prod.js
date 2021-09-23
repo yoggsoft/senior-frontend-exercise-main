@@ -9,6 +9,7 @@ module.exports = () => ({
   mode: 'production',
   output: {
     path: path.resolve(process.cwd(), 'dist'),
+    filename: "[name].[hash].js"
   },
   entry: [
     './src/index.js',
@@ -25,7 +26,7 @@ module.exports = () => ({
       template: path.resolve('./src/index.html'),
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: '[name]-[hash].css',
       chunkFilename: '[id].css',
     }),
     new MinifyPlugin(),
@@ -57,7 +58,7 @@ module.exports = () => ({
             loader: 'file-loader',
             options: {
               outputPath: './images',
-              name: '[name].[ext]',
+              name: '[name][hash].[ext]',
             },
           },
         ],

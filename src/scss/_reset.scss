@@ -1,0 +1,45 @@
+// resets
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px; // 1rem = 16px
+}
+
+body {
+  font: 13px 'Open Sans', Sans-Serif, Arial;
+}
+
+h1,
+h3 {
+  margin-bottom: 0.75rem;
+  color: $purple;
+  font-size: 2rem;
+}
+
+strong {
+  font-weight: 600;
+}
+
+a {
+  color: $purple;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+input {
+  padding: 5px;     // not rem for consistency with branding
+  font-size: 13px;  // not rem for consistency with branding
+  border: 0;
+  border-bottom: 1px solid $grey;
+}
+
+input[type="text"] {
+  width: 100%;
+}
