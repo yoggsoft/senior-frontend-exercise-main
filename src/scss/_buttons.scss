@@ -1,0 +1,15 @@
+// buttons
+.btn {
+  width: 100%;
+  border-radius: 37px; // not rem for consistency with branding
+  padding: 15px;       // not rem for consistency with branding
+  font-size: 1rem;
+  text-transform: uppercase;
+  border: 0;
+  cursor: pointer;
+
+  &-primary {
+    background-color: $purple;
+    color: $white;
+  }
+}
